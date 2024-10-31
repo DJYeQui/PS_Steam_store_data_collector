@@ -3,7 +3,7 @@ from GameIdList import GameIdList
 from GamePage import game_info
 
 
-def write_game_info_to_csv(game_data, filename="146_page_to_160.csv"):
+def write_game_info_to_csv(game_data, filename="1-176_ps_browse_ps5.csv"):
     # if there is not csv it will create else it will edit
     file_exists = False
     try:
