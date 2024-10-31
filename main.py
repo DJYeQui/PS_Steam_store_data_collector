@@ -31,7 +31,7 @@ def write_game_info_to_csv(game_data, filename="146_page_to_160.csv"):
 # URL you want to scrape
 url = "https://store.playstation.com/tr-tr/pages/browse/1"  # sample url
 b = GameIdList()
-page_game_id_list = b.read_all_game_ids_in_page(url, 1, 1, "?PS5=targetPlatforms")
+page_game_id_list = b.read_all_game_ids_in_page(url, 1, 2, "?PS5=targetPlatforms")
 
 for game_id in page_game_id_list:
     general_url = "https://store.playstation.com/en-tr/concept/" + str(game_id)
