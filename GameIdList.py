@@ -31,7 +31,7 @@ class GameIdList(object):
             print("Failed to retrieve the page")
 
     # TODO read_all_game_ids is returns selected pages games ids with int list
-    def read_all_game_ids(self, cut_url: str, starting_page: int, end_page: int) -> list:
+    def read_all_game_ids_in_page(self, cut_url: str, starting_page: int, end_page: int) -> list:
         end_page_index = end_page + 1
         page_index = starting_page
         if page_index > end_page or page_index <= 0 or end_page_index <= 0: raise InvalidParameterError(
