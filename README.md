@@ -8,7 +8,7 @@ Since the PS Store lacks a consistent standard in many aspects, some data points
 
 - **Rating Count**: The rating count sometimes appears as "1.6k." This data should be corrected manually after retrieval.
 - **Genre Information**: Some games list their genres twice, e.g., "action, action."
-- **Language Options**: Games offering separate language options for PS4 and PS5 may require adjustments due to additional titles added by the developers.
+- **Language Options**: Games offering separate language options for PS4 and PS5 may require adjustments due to extension of csv file.
 
 After data retrieval, some cleaning and corrections are necessary. Additionally, it was observed that data for only around 20 out of 3,500 games could not be retrieved. Although this is a minor number, it’s still worth noting.
 
