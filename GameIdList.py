@@ -31,7 +31,7 @@ class GameIdList(object):
             print("Failed to retrieve the page")
 
     # TODO read_all_game_ids is returns selected pages games ids with int list
-    def read_all_game_ids_in_page(self, cut_url: str, starting_page: int, end_page: int) -> list:
+    def read_all_game_ids_in_page(self, cut_url: str, starting_page: int, end_page: int, filter_for: str) -> list:
         end_page_index = end_page + 1
         page_index = starting_page
         if page_index > end_page or page_index <= 0 or end_page_index <= 0: raise InvalidParameterError(
@@ -42,17 +42,17 @@ class GameIdList(object):
             "be greater then 0")
         all_game_ids = []
         try:
-            # If there is a number part in url
+            # If url is end with number
             if isinstance(int(cut_url[cut_url.rfind("/") + 1:]), int):
                 for page_index_reading in range(page_index, end_page_index):
                     print(f"games ids are collecting \n page number: {page_index_reading} \n")
-                    page_24_game_list = self.game_id_list(cut_url[:-1] + str(page_index_reading))
+                    page_24_game_list = self.game_id_list(cut_url[:-1] + str(page_index_reading) + str(filter_for))
                     all_game_ids.extend(page_24_game_list)
             return all_game_ids
         except ValueError:
             for page_index_reading in range(page_index, end_page_index):
                 print(f"games ids are collecting \n page number: {page_index_reading} \n")
-                page_24_game_list = self.game_id_list(cut_url + str(page_index_reading))
+                page_24_game_list = self.game_id_list(cut_url + str(page_index_reading)+ str(filter_for))
                 all_game_ids.extend(page_24_game_list)
             return all_game_ids
         except InvalidParameterError:

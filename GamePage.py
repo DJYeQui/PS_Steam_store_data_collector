@@ -76,13 +76,18 @@ def game_info(url: str) -> dict:
         values = soup.find_all('dd')
 
         """collumn names"""
-        game_info['Collecting_date:'] = time.strftime("%m/%d/%Y")
+        game_info['Collection Date:'] = time.strftime("%d/%m/%Y")
         game_info['Platform:'] = None
         game_info['Release:'] = None
         game_info['Genres:'] = None
         game_info['Publisher:'] = None
         game_info['Voice:'] = None
-        game_info['Screen_languages:'] = None
+        game_info['Screen Languages:'] = None
+        game_info['PS5 Voice:'] = None
+        game_info['PS5 Screen Languages:'] = None
+        game_info['PS4 Voice:'] = None
+        game_info['PS4 Screen Languages:'] = None
+
 
 
 
