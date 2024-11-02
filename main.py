@@ -25,7 +25,7 @@ def write_game_info_to_csv(game_data, filename="1-176_ps_browse_ps5.csv"):
         # write csv file
         writer.writerow(game_data)
 
-    print(f"Veri '{filename}' dosyasına başarıyla eklendi.")
+    print(f"Veri '{filename}' dosyasina başariyla eklendi.")
 
 
 # URL you want to scrape

@@ -88,9 +88,6 @@ def game_info(url: str) -> dict:
         game_info['PS4 Voice:'] = None
         game_info['PS4 Screen Languages:'] = None
 
-
-
-
         # Anahtar-değer çiftlerini bir sözlükte saklayın
         for key, value in zip(keys, values):
             key_text = key.get_text(strip=True)
