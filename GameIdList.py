@@ -4,7 +4,7 @@ from ExceptionList import InvalidParameterError
 
 
 class GameIdList(object):
-    # TODO game_id_list function is returns game ids which are in page with int List
+    """TODO game_id_list function is returns game ids which are in page with int List"""
     @staticmethod
     def game_id_list(url: str) -> list:
         # Send a GET request to the URL
